@@ -18,3 +18,7 @@ module.exports = {
    * chore：构建过程或辅助工具的变动
    */
 };
+git branch - m main master
+git fetch origin
+git branch - u origin / master master
+git remote set - head origin - a

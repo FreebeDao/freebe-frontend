@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <!-- <div>
-    <div class="onopen_mask">
+  <div>
+    <!-- <div class="onopen_mask">
       <div class="onopen_title">
         <img src="@/assets/logos/light_logo.svg" alt="">
         <p>
@@ -10,13 +10,13 @@
           is rushing to online~~
         </p>
       </div>
-    </div>
+    </div> -->
     <FreeTopNav />
     <RouterView />
     <FreeFooter />
-  </div> -->
+  </div>
 
-  <div class="noopen_box">
+  <!-- <div class="noopen_box">
     <div class="noopen_content">
       <div class="header_title">
         FreeBe is still under prototyping…
@@ -35,7 +35,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 

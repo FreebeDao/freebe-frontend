@@ -10,68 +10,68 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   // 当页面切换时, 回到页面顶部
   scrollBehavior: () => ({ top: 0 }),
-  routes: [
-    {
-      path: '/',
-      component: () => import('@/components/Layout/FreeLayout.vue'),
-      children: [
-        {
-          path: '',
-          component: () => import('@/components/Layout/FreeLayout.vue'),
-        },
-        {
-          path: '/:pathMatch(.*)',
-          redirect: '/',
-        },
-      ],
-    },
-  ],
-
-
   // routes: [
   //   {
   //     path: '/',
   //     component: () => import('@/components/Layout/FreeLayout.vue'),
   //     children: [
-  //       // {
-  //       //   path: '',
-  //       //   component: () => import('@/views/Home/HomePage.vue')
-  //       // },
   //       {
-  //         path: '/',
-  //         component: () => import('@/views/Square/SquarePage.vue'),
-  //       },
-  //       {
-  //         path: '/mydaos',
-  //         component: () => import('@/views/Home/MyDaos.vue'),
-  //         beforeEnter: (to, from, next) => {
-  //           if (store.profile.result.wallet_address) {
-  //             next();
-  //           } else {
-  //             next('/');
-  //           }
-  //         },
-  //       },
-  //       {
-  //         path: '/thedao',
-  //         component: () => import('@/views/Home/TheDao.vue'),
-  //       },
-  //       {
-  //         path: '/404',
-  //         component: () => import('@/views/NotDefindPage.vue'),
+  //         path: '',
+  //         component: () => import('@/components/Layout/FreeLayout.vue'),
   //       },
   //       {
   //         path: '/:pathMatch(.*)',
-  //         redirect: '/404',
+  //         redirect: '/',
   //       },
   //     ],
   //   },
-  //   // Create Dao
-  //   // {
-  //   //   path: '/createdao',
-  //   //   component: () => import('@/views/Dao/CreateDaoPage.vue'),
-  //   // },
   // ],
+
+
+  routes: [
+    {
+      path: '/',
+      component: () => import('@/components/Layout/FreeLayout.vue'),
+      children: [
+        // {
+        //   path: '',
+        //   component: () => import('@/views/Home/HomePage.vue')
+        // },
+        {
+          path: '/',
+          component: () => import('@/views/Square/SquarePage.vue'),
+        },
+        {
+          path: '/mydaos',
+          component: () => import('@/views/Home/MyDaos.vue'),
+          beforeEnter: (to, from, next) => {
+            if (store.profile.result.wallet_address) {
+              next();
+            } else {
+              next('/');
+            }
+          },
+        },
+        {
+          path: '/thedao',
+          component: () => import('@/views/Home/TheDao.vue'),
+        },
+        {
+          path: '/404',
+          component: () => import('@/views/NotDefindPage.vue'),
+        },
+        {
+          path: '/:pathMatch(.*)',
+          redirect: '/404',
+        },
+      ],
+    },
+    // Create Dao
+    // {
+    //   path: '/createdao',
+    //   component: () => import('@/views/Dao/CreateDaoPage.vue'),
+    // },
+  ],
 });
 
 export default router;

@@ -40,7 +40,7 @@ const checkedModel = useVModel(props, "checked", emit);
     width: 600px;
     margin: 25px 0;
     font-family: HelveticaNeue;
-    font-size: 32px;
+    font-size: 18px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -55,7 +55,7 @@ const checkedModel = useVModel(props, "checked", emit);
     justify-content: flex-start;
 
     p {
-      margin-left: 20px;
+      margin-left: 40px;
       font-size: 20px;
       font-weight: 500;
     }

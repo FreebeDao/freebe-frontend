@@ -27,6 +27,7 @@ const btnVisibility = ref<boolean>(!userStore.profile.result.wallet_address);
     height: 40px;
     border-radius: inherit;
     outline-style: none;
+    background-color: #f8f8f9;
     border: 1px solid #ccc;
     padding: 13px 20px;
     font-size: 14px;
@@ -34,6 +35,10 @@ const btnVisibility = ref<boolean>(!userStore.profile.result.wallet_address);
     border: solid 1px #292422;
     font-family: "Microsoft soft";
     margin-right: 20px;
+
+    &:hover, &:focus {
+      background-color: #fff;
+    }
 
     &:focus {
       border-color: @cyan-primary-color;

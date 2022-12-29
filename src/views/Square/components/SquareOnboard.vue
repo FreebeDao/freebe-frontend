@@ -24,7 +24,7 @@ const checkedModel = useVModel(props, "checked", emit);
 
   .onboard_main_text {
     font-family: HelveticaNeue;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;

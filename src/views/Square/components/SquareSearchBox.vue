@@ -35,6 +35,7 @@ const btnVisibility = ref<boolean>(!userStore.profile.result.wallet_address);
     border: solid 1px #292422;
     font-family: "Microsoft soft";
     margin-right: 20px;
+    transition: all 0.2s ease-in-out;
 
     &:hover, &:focus {
       background-color: #fff;
